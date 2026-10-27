@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="Demo web de Aply Acabados Arquitectónicos">
+  <title>Aply | Acabados Arquitectónicos</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="brand" data-go="inicio" aria-label="Ir al inicio">
+      <img src="assets/aply-logo.png" alt="Aply Acabados Arquitectónicos">
+    </button>
+    <nav class="nav" aria-label="Navegación principal">
+      <button data-go="inicio" class="active">Inicio</button>
+      <div class="nav-dropdown nav-about">
+        <button class="nav-dropdown-trigger" type="button" aria-haspopup="true">Nosotros</button>
+        <div class="nav-dropdown-menu">
+          <button data-go="nosotros">Nuestra empresa</button>
+          <button data-go="que-hacemos">Qué hacemos</button>
+          <button data-go="clientes">Nuestros clientes</button>
+        </div>
+      </div>
+      <button data-go="servicios">Servicios</button>
+      <button data-project-open="comerciales">Proyectos comerciales</button>
+      <button data-project-open="residenciales">Proyectos residenciales</button>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" type="button" aria-haspopup="true">Acabados arquitectónicos</button>
+        <div class="nav-dropdown-menu finish-dropdown">
+          <div class="nav-submenu">
+            <button class="nav-submenu-trigger" type="button" aria-haspopup="true">Baños <span>›</span></button>
+            <div class="nav-submenu-menu">
+              <button data-open-finish="baños" data-finish-sub="Muebles de baño">Muebles de baño</button>
+              <button data-open-finish="baños" data-finish-sub="Sanitarios">Sanitarios</button>
+              <button data-open-finish="baños" data-finish-sub="Tinas y jacuzzis">Tinas y jacuzzis</button>
+            </div>
+          </div>
+          <button data-open-finish="pisos">Pisos laminados, PVC y SPC</button>
+          <button data-open-finish="ceramicas">Cerámicas y porcelanatos</button>
+          <button data-open-finish="carpinteria">Carpintería</button>
+          <button class="finish-dropdown-furniture" data-open-finish="mobiliario">Mobiliario</button>
+        </div>
+      </div>
+      <button data-go="contacto" class="nav-cta">Contacto</button>
+    </nav>
+    <button class="menu" aria-label="Abrir menú">Menú</button>
+  </header>
+
+  <main id="app">
+    <section class="screen active hero" data-screen="inicio">
+      <div class="hero-copy">
+        <h1>Espacios pensados para trabajar, vivir y permanecer.</h1>
+        <p>Aply diseña, presupuesta y construye oficinas, espacios comerciales y proyectos residenciales personalizados.</p>
+        <div class="actions">
+          <button class="primary" data-project-open="comerciales">Conocer proyectos</button>
+          <button class="secondary" data-go="contacto">Solicitar cotización</button>
+        </div>
+      </div>
+      <div class="hero-visual hero-carousel" aria-label="Galería principal">
+        <div class="hero-slide active"><strong>Foto 1</strong></div>
+        <div class="hero-slide"><strong>Foto 2</strong></div>
+        <div class="hero-slide"><strong>Foto 3</strong></div>
+        <div class="hero-slide"><strong>Foto 4</strong></div>
+        <div class="hero-slide"><strong>Foto 5</strong></div>
+        <div class="hero-slide"><strong>Foto 6</strong></div>
+        <button class="carousel-arrow previous" type="button" aria-label="Imagen anterior">‹</button>
+        <button class="carousel-arrow next" type="button" aria-label="Imagen siguiente">›</button>
+        <button class="carousel-pause" type="button" aria-label="Pausar carrusel">Ⅱ</button>
+        <div class="carousel-status"><span id="carousel-current">1</span> / 6</div>
+      </div>
+      <div class="screen-index">01 <span>/ 08</span></div>
+    </section>
+
+    <section class="screen about" data-screen="nosotros">
+      <div class="about-heading">
+        <span class="eyebrow">Nosotros</span>
+        <h2>Experiencia aplicada a cada etapa del proyecto.</h2>
+        <p>Aply integra diseño, presupuesto, construcción y acabados para desarrollar espacios según las necesidades de cada cliente.</p>
+      </div>
+      <div class="about-grid">
+        <article><div data-expand-photo data-photo-title="Diseño arquitectónico · Foto 1" role="button" tabindex="0">Pon tu foto aquí</div><h3>Diseño arquitectónico</h3></article>
+        <article><div data-expand-photo data-photo-title="Diseño interior · Foto 1" role="button" tabindex="0">Pon tu foto aquí</div><h3>Diseño interior</h3></article>
+        <article><div data-expand-photo data-photo-title="Presupuesto de obra · Foto 1" role="button" tabindex="0">Pon tu foto aquí</div><h3>Presupuesto de obra</h3></article>
+        <article><div data-expand-photo data-photo-title="Obra a todo costo · Foto 1" role="button" tabindex="0">Pon tu foto aquí</div><h3>Obra a todo costo</h3></article>
+        <article><div data-expand-photo data-photo-title="Mobiliario y acabados · Foto 1" role="button" tabindex="0">Pon tu foto aquí</div><h3>Mobiliario y acabados</h3></article>
+        <article><div data-expand-photo data-photo-title="Obra civil general · Foto 1" role="button" tabindex="0">Pon tu foto aquí</div><h3>Obra civil general</h3></article>
+        <article><div data-expand-photo data-photo-title="Redes eléctricas, voz y datos · Foto 1" role="button" tabindex="0">Pon tu foto aquí</div><h3>Redes eléctricas, voz y datos</h3></article>
+        <article><div data-expand-photo data-photo-title="Redes hidráulicas y contra incendios · Foto 1" role="button" tabindex="0">Pon tu foto aquí</div><h3>Redes hidráulicas y contra incendios</h3></article>
+        <article><div data-expand-photo data-photo-title="Branding · Foto 1" role="button" tabindex="0">Pon tu foto aquí</div><h3>Branding</h3></article>
+      </div>
+      <div class="screen-index">02 <span>/ 08</span></div>
+    </section>
+
+    <section class="screen what-we-do" data-screen="que-hacemos">
+      <div class="section-heading compact">
+        <span class="eyebrow">Aply</span>
+        <h2>Qué hacemos</h2>
+        <p>Soluciones para diseñar, adecuar y completar espacios comerciales y residenciales.</p>
+      </div>
+      <div class="what-grid">
+        <article class="what-card">
+          <div class="what-photo" data-expand-photo data-photo-title="Acabados arquitectónicos y mobiliario · Foto 1" role="button" tabindex="0">Pon tu foto aquí</div>
+          <span>01</span>
+          <h3>Acabados arquitectónicos y mobiliario</h3>
+          <p>Aply cuenta con un portafolio de acabados y mobiliario para distintos tipos de proyecto, seleccionado según las necesidades de cada cliente.</p>
+        </article>
+        <article class="what-card featured">
+          <div class="what-photo" data-expand-photo data-photo-title="Arquitectura y obra civil · Foto 1" role="button" tabindex="0">Pon tu foto aquí</div>
+          <span>02</span>
+          <h3>Arquitectura y obra civil</h3>
+          <p>Diseñamos espacios interiores y arquitectónicos desde el requerimiento inicial, pasando por la obra civil y finalizando con la adecuación necesaria para su funcionamiento.</p>
+        </article>
+        <article class="what-card">
+          <div class="what-photo" data-expand-photo data-photo-title="Renting de oficinas · Foto 1" role="button" tabindex="0">Pon tu foto aquí</div>
+          <span>03</span>
+          <h3>Renting de oficinas</h3>
+          <p>Ofrecemos opciones de oficinas adecuadas a las necesidades del cliente para facilitar espacios de trabajo funcionales y listos para operar.</p>
+        </article>
+      </div>
+      <div class="screen-index">03 <span>/ 08</span></div>
+    </section>
+
+    <section class="screen services" data-screen="servicios">
+      <div class="section-heading">
+        <span class="eyebrow">Lo que hacemos</span>
+        <h2>Un solo equipo, de la idea a la entrega.</h2>
+        <p>Selecciona un servicio para conocer su alcance.</p>
+      </div>
+      <div class="service-grid">
+        <button class="service-card" data-modal="Diseño arquitectónico" data-desc="Escribe aquí la descripción del servicio de diseño arquitectónico."><b>01</b><span>Diseño arquitectónico</span></button>
+        <button class="service-card" data-modal="Diseño interior" data-desc="Escribe aquí la descripción del servicio de diseño interior."><b>02</b><span>Diseño interior</span></button>
+        <button class="service-card" data-modal="Presupuesto de obra" data-desc="Escribe aquí la descripción del servicio de presupuesto de obra."><b>03</b><span>Presupuesto de obra</span></button>
+        <button class="service-card" data-modal="Mobiliario y acabados" data-desc="Escribe aquí la descripción de mobiliario y acabados."><b>04</b><span>Mobiliario y acabados</span></button>
+        <button class="service-card" data-modal="Obra a todo costo" data-desc="Escribe aquí la descripción del servicio de obra a todo costo."><b>05</b><span>Obra a todo costo</span></button>
+        <button class="service-card" data-modal="Obra civil general" data-desc="Escribe aquí la descripción del servicio de obra civil general."><b>06</b><span>Obra civil general</span></button>
+        <button class="service-card" data-modal="Redes eléctricas, voz y datos" data-desc="Escribe aquí la descripción de redes eléctricas, voz y datos."><b>07</b><span>Redes eléctricas, voz y datos</span></button>
+        <button class="service-card" data-modal="Redes hidráulicas y contra incendios" data-desc="Escribe aquí la descripción de redes hidráulicas y sistemas contra incendios."><b>08</b><span>Redes hidráulicas y contra incendios</span></button>
+      </div>
+      <div class="screen-index">04 <span>/ 08</span></div>
+    </section>
+
+    <section class="screen" data-screen="proyectos">
+      <div class="projects-head">
+        <div class="section-heading compact">
+          <span class="eyebrow">Portafolio</span>
+          <h2 id="projects-title">Proyectos comerciales</h2>
+          <p id="projects-description">Diseñamos y ejecutamos espacios corporativos, comerciales e institucionales que responden a las necesidades operativas, estéticas y de marca de cada cliente.</p>
+        </div>
+      </div>
+      <div class="project-grid active" data-project-list="comerciales">
+        <button class="project-card" data-project="Megaludoteca Tocancipá"><div class="project-photo">Pon tu foto aquí</div><span>Megaludoteca Tocancipá</span><small>Ver proyecto →</small></button>
+        <button class="project-card" data-project="Oficinas Administrativas C.C. Plaza Central"><div class="project-photo">Pon tu foto aquí</div><span>Oficinas Administrativas<br>C.C. Plaza Central</span><small>Ver proyecto →</small></button>
+        <button class="project-card" data-project="Oficinas Proyectistas Asociados"><div class="project-photo">Pon tu foto aquí</div><span>Oficinas Proyectistas Asociados</span><small>Ver proyecto →</small></button>
+        <button class="project-card" data-project="Productora HYTV"><div class="project-photo">Pon tu foto aquí</div><span>Productora HYTV</span><small>Ver proyecto →</small></button>
+      </div>
+      <div class="project-grid" data-project-list="residenciales">
+        <button class="project-card" data-project="Apartamento 106"><div class="project-photo">Pon tu foto aquí</div><span>Apartamento 106</span><small>Ver proyecto →</small></button>
+        <button class="project-card" data-project="Apartamento 142"><div class="project-photo">Pon tu foto aquí</div><span>Apartamento 142</span><small>Ver proyecto →</small></button>
+        <button class="project-card" data-project="Apartamento 127"><div class="project-photo">Pon tu foto aquí</div><span>Apartamento 127</span><small>Ver proyecto →</small></button>
+        <button class="project-card" data-project="Apartamento 142A"><div class="project-photo">Pon tu foto aquí</div><span>Apartamento 142A</span><small>Ver proyecto →</small></button>
+      </div>
+      <div class="screen-index">05 <span>/ 08</span></div>
+    </section>
+
+    <section class="screen finishes" data-screen="acabados">
+      <div class="section-heading">
+        <span class="eyebrow">Acabados arquitectónicos</span>
+        <h2>Materiales y detalles para completar cada espacio.</h2>
+      </div>
+      <div class="finish-layout">
+        <div class="finish-content">
+          <div class="finish-gallery" aria-label="Galería de la categoría seleccionada">
+            <button class="finish-gallery-photo main" type="button" data-gallery-index="0"><span>Baños · Foto 1</span><small>Ampliar</small></button>
+            <button class="finish-gallery-photo" type="button" data-gallery-index="1"><span>Baños · Foto 2</span><small>Ampliar</small></button>
+            <button class="finish-gallery-photo" type="button" data-gallery-index="2"><span>Baños · Foto 3</span><small>Ampliar</small></button>
+            <button class="finish-gallery-photo" type="button" data-gallery-index="3"><span>Baños · Foto 4</span><small>Ampliar</small></button>
+          </div>
+          <div>
+            <span class="finish-label">Categoría seleccionada</span>
+            <h3 id="finish-title">Baños</h3>
+            <p id="finish-description">Escribe aquí la descripción de esta categoría de acabados.</p>
+            <div id="finish-subcategories" class="chips"><span>Muebles de baño</span><span>Sanitarios</span><span>Tinas y jacuzzis</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="screen-index">06 <span>/ 08</span></div>
+    </section>
+
+    <section class="screen clients" data-screen="clientes">
+      <div class="section-heading compact clients-heading">
+        <span class="eyebrow">Experiencia compartida</span>
+        <h2>Nuestros clientes</h2>
+        <p>Empresas que han confiado en Aply para desarrollar y adecuar sus espacios.</p>
+      </div>
+      <div class="client-grid">
+        <div class="client-logo"><span>Logo cliente 1</span></div>
+        <div class="client-logo"><span>Logo cliente 2</span></div>
+        <div class="client-logo"><span>Logo cliente 3</span></div>
+        <div class="client-logo"><span>Logo cliente 4</span></div>
+        <div class="client-logo"><span>Logo cliente 5</span></div>
+        <div class="client-logo"><span>Logo cliente 6</span></div>
+      </div>
+      <div class="screen-index">07 <span>/ 08</span></div>
+    </section>
+
+    <section class="screen contact" data-screen="contacto">
+      <div class="contact-copy">
+        <span class="eyebrow">Hablemos de tu proyecto</span>
+        <h2>Cuéntanos qué espacio quieres transformar.</h2>
+        <p>Conversemos sobre tu proyecto y encontremos la mejor solución para transformar tu espacio.</p>
+        <div class="contact-details">
+          <div><small>Teléfono</small><strong><a href="tel:+576012859295">601 285 9295</a></strong></div>
+          <div><small>WhatsApp</small><strong><a href="https://wa.me/573138555555" target="_blank" rel="noreferrer">(+57) 313 855 5555</a></strong></div>
+          <div><small>Showroom</small><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Carrera+47+%23138-35%2F45+Bogota+Colombia" target="_blank" rel="noreferrer">Carrera 47 # 138-35/45, Bogotá</a></strong></div>
+        </div>
+        <div class="socials">
+          <a href="https://www.instagram.com/aplyacabados/" target="_blank" rel="noreferrer">Instagram · @AplyAcabados</a>
+          <a href="https://www.facebook.com/aplyacabados/" target="_blank" rel="noreferrer">Facebook</a>
+        </div>
+      </div>
+      <form class="quote-form" onsubmit="return false">
+        <div class="field"><label>Nombre</label><input placeholder="Escribe tu nombre"></div>
+        <div class="field"><label>Correo</label><input type="email" placeholder="nombre@empresa.com"></div>
+        <div class="field"><label>Teléfono</label><input placeholder="+57 300 000 0000"></div>
+        <div class="field"><label>Tipo de proyecto</label><select><option>Comercial</option><option>Residencial</option><option>Acabados</option></select></div>
+        <div class="field full"><label>Cuéntanos sobre el proyecto</label><textarea placeholder="Escribe aquí la descripción de tu proyecto"></textarea></div>
+        <button class="primary full">Enviar solicitud</button>
+      </form>
+      <div class="screen-index">08 <span>/ 08</span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" aria-label="Información rápida de contacto">
+    <strong>Aply</strong>
+    <a href="tel:+576012859295">Tel. 601 285 9295</a>
+    <a href="https://wa.me/573138555555" target="_blank" rel="noreferrer">WhatsApp (+57) 313 855 5555</a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Carrera+47+%23138-35%2F45+Bogota+Colombia" target="_blank" rel="noreferrer">Cra. 47 # 138-35/45 · Bogotá</a>
+    <a href="https://www.instagram.com/aplyacabados/" target="_blank" rel="noreferrer">Instagram @AplyAcabados</a>
+    <a href="https://www.facebook.com/aplyacabados/" target="_blank" rel="noreferrer">Facebook</a>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/573138555555" target="_blank" rel="noreferrer" aria-label="Contactar a Aply por WhatsApp">
+    <svg viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.8l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.4-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.3c-5.5-2.8-32.8-16.1-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.3-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.5z"/>
+    </svg>
+  </a>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" data-close aria-label="Cerrar">×</button>
+      <div class="modal-gallery">
+        <div data-modal-photo data-photo-index="0" role="button" tabindex="0">Pon tu foto aquí</div><div data-modal-photo data-photo-index="1" role="button" tabindex="0">Pon tu foto aquí</div><div data-modal-photo data-photo-index="2" role="button" tabindex="0">Pon tu foto aquí</div>
+      </div>
+      <div class="modal-copy">
+        <span class="eyebrow">Aply · Proyecto</span>
+        <h2 id="modal-title">Nombre del proyecto</h2>
+        <p id="modal-description">Escribe aquí la descripción.</p>
+        <dl><div><dt>Ubicación</dt><dd>Pon la ubicación aquí</dd></div><div><dt>Área</dt><dd>Pon el área aquí</dd></div><div><dt>Año</dt><dd>Pon el año aquí</dd></div></dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="finish-lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <button class="lightbox-close" type="button" data-lightbox-close aria-label="Cerrar galería">×</button>
+    <button class="lightbox-arrow previous" type="button" data-lightbox-previous aria-label="Foto anterior">‹</button>
+    <div class="lightbox-photo">
+      <strong id="lightbox-title">Baños · Foto 1</strong>
+      <span><b id="lightbox-current">1</b> / 4</span>
+    </div>
+    <button class="lightbox-arrow next" type="button" data-lightbox-next aria-label="Foto siguiente">›</button>
+  </div>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>
